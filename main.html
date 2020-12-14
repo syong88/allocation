@@ -1,0 +1,686 @@
+<!DOCTYPE HTML>
+<html lang='ko'>
+<head>
+	<title> allocation </title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name='title' content='올로케이션'>
+	<meta name='subject' content='올로케이션'>
+	<meta name='publisher' content='윤소영'>
+	<meta name='location' content='Seoul Korea'>
+	<meta name='author' content='올로케이션'>
+	<meta name='author-Date' content='2020-11-18'>
+	<meta name='copyright' content='올로케이션'>
+	<meta name='description' content='올로케이션, 주차, 주차관제, 전국의 주차를 통합니다.'>
+	<meta name='keywords' content='올로케이션, 주차, 파킹, 통합관제, 파킹봇, 스페이스키퍼, 로드라커'>
+	<meta name='classification' content=''>
+	<meta name='robots' content='index,follow'>
+	
+	<link rel='shortcut icon' href='../img/logo_img.png'>
+	<link rel='apple-touch-icon' href='../img/logo_img.png'>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type='text/css' href="../css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	
+	
+	<link rel='stylesheet' type='text/css' href='../css/style.css'> 
+	<link rel='stylesheet' type='text/css' href='../css/reset.css'> 
+	 <link rel='stylesheet' type='text/css' href='../css/response.css'> 
+	
+
+	<!-- 제공받은 자바스크립트 라이브러리 프로그램 - 오픈소스 -->
+	<script src='../js/lib/jquery-1.12.4.min.js'></script>
+	<script src='../js/lib/jquery.touchSwipe.js'></script>
+	<script src='../js/lib/jquery.easing.1.3.js'></script>
+	
+	<script src='../js/section2Border.js'></script> 
+	<script src='../js/header.js'></script> 
+	<script src='../js/sec1-mainSlide.js'></script> 
+	<script src='../js/sec1-txt.js'></script> 
+	<script src='../js/sec2-txtAni.js'></script> 
+	<script src='../js/sec2-re.js'></script> 
+	<!-- <script src='../js/sec2-txtResize.js'></script>  -->
+	<script src='../js/sec3-txtAni.js'></script> 
+	<script src='../js/sec4-txtAni.js'></script> 
+	<script src='../js/sec5-txtAni.js'></script> 
+	<script src='../js/menu.js'></script> 
+	<script src='../js/popUp.js'></script> 
+
+	<style>
+		#pop { width:500px; height:500px; position:absolute; left:5%; top:200%;}
+		@media all and (max-width:570px){
+			/* 팝업크기 조정 */
+			#pop { width:100%; height: 502px; position: absolute;; left:0; top:101%; }
+			#pop img { width: 100%;  }
+		}
+	</style>
+	
+</head>
+<body>
+<div id='wrap'>
+
+	<ul id='skip'>
+		<li><a href='#header'>메뉴바로가기 </a></li>
+		<li><a href='#main'  >콘텐츠바로가기</a></li>
+		<li><a href='#footer'>하단바로가기 </a></li>
+	</ul>
+
+	<script>
+		$(".close").click(function(){
+				  $("#pop").style({"display":"none"});
+		});
+	</script>
+
+	<header id='header'>
+		<div id="pop" >
+			<a onClick="document.getElementById('pop').style.display='none';">
+			<img src="../img/popup.jpg" width="500" height="500" alt="img1"></a>    
+		</div>
+		
+			<div>
+			<div class="nav-wrap ">
+				<div class="nav-logo">
+					<div class="logo-wrap">
+						<a href="#" class="logo-btn" onclick="location.href='main.html'; return false"></a>
+					</div>
+				</div>
+				<div class="nav-menu" >
+					<nav>
+
+						<ul>
+							<li class="nav-manu-title"><a href="#" onclick="location.href='sub1.html'">회사소개</a></li>
+							<li class="nav-manu-title"><a href="#" onclick="location.href='sub2.html'">스페이스키퍼</a></li>
+							<li class="nav-manu-title"><a href="#" onclick="location.href='sub3.html'">로드라커</a></li>
+							<li class="nav-manu-title"><a href="#" onclick="location.href='sub4.html'">파킹봇</a></li>
+							<li class="nav-manu-title"><a href="#" onclick="location.href='sub5.html'">파크원</a></li>
+							<li class="nav-manu-title"><a href="#" onclick="location.href='sub6.html'">언론보도</a></li>
+						</ul>
+
+						<div class="appbarBt-wrp">
+							<!-- 앱바버튼 -->
+							<a href="#" class="appbarBt">
+																
+								<!-- menu appbar -->
+								<span class="menuBar-wrp">
+									<i class="menu-bar menu-bar1"></i>
+									<i class="menu-bar menu-bar2"></i>
+									<i class="menu-bar menu-bar3"></i>
+									
+									<!-- close appbar -->
+									<span class="closeBtn-wrp">
+										<i class="close-bar close-bar1"></i>
+										<!-- <i class="close-bar close-bar2"></i> -->
+										<i class="close-bar close-bar2"></i>
+									</span>
+								</span>
+							</a>
+
+						</div>
+					</nav>	
+				</div>
+		
+			</div>
+			<!-- 모바일 메뉴 전체화면 -->
+			<div class='mobile appbar-menu-wrap'>
+				<nav>
+					<ul class="fixedclear">
+						<li><span><i class="menu-ico">/</i><a href='#' onclick="location.href='sub1.html'" >회사소개</a></span></li>
+						<li><span><i class="menu-ico">/</i><a href='#' onclick="location.href='sub2.html'" >스페이스키퍼</a></span></li>
+						<li><span><i class="menu-ico">/</i><a href='#' onclick="location.href='sub3.html'" >로드라커</a></span></li>
+						<li><span><i class="menu-ico">/</i><a href='#' onclick="location.href='sub4.html'" >파킹봇</a></span></li>
+						<li><span><i class="menu-ico">/</i><a href='#' onclick="location.href='sub5.html'" >파크원</a></span></li>
+						<li><span><i class="menu-ico">/</i><a href='#' onclick="location.href='sub6.html'" >언론보도</a></span></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- 모바일 메뉴 전체화면 end -->
+		</div>
+	</header>
+	
+	<main id='main'>
+	
+		<section id='section1'>
+			<div>
+				<div class="slide-container">
+					<div class="slide-view">
+						<ul class='slide-wrap'>
+
+							<!-- 슬라이드 3 -->
+							<li class='slide slide3'>
+								<div>
+									<div class='slide-title-wrap'>
+										<div class="slide-title1">
+											<strong>파크원</strong> 
+										</div>
+										<div class="slide-title2">
+											<P>
+												주차 통합관제 플랫폼 
+											</P>
+										</div>										
+										<div class="slide-title3">										
+											<i class="slide-txt-bar"></i> 
+											<span>
+												스페이스키퍼 &middot; 로드라커 &middot; 파킹봇을<br>
+												하나로 통합하는 관제서비스 플랫폼입니다.
+											</span> 
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 슬라이드 3 end -->
+							<!-- 슬라이드 0 -->
+							<li class='slide slide0'>
+								<div>
+									<div class='slide-title-wrap'>
+										<div class="slide-title1">
+											<strong>스페이스키퍼</strong> 
+										</div>
+										<div class="slide-title2">
+											<P>
+												VIP전용 지정주차 차단기 
+											</P>
+										</div>
+										<div class="slide-title3">
+											<i class="slide-txt-bar"></i> 
+											<span>
+												부정주차를 막고<br>
+												지정된 주차공간을 지켜드립니다.
+											</span> 
+										</div>
+									</div>
+									
+								</div>
+							</li>
+							<!-- 슬라이드 0 end -->
+							<!-- 슬라이드 1 -->
+							<li class='slide slide1'>
+								<div>
+									<div class='slide-title-wrap'>
+										<div class="slide-title1">
+											<strong>로드라커</strong> 
+										</div>
+										<div class="slide-title2">
+											<P>
+												무인 노상 주차면 관리시스템 
+											</P>
+										</div>
+										<div class="slide-title3">
+											<i class="slide-txt-bar"></i> 
+											<span>
+												개별 주차면을 무인으로 관리하고<br>
+												정산하는 시스템입니다.
+											</span> 
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 슬라이드 1 end -->
+							<!-- 슬라이드 2 -->
+							<li class='slide slide2'>
+								<div>
+									<div class='slide-title-wrap'>
+										<div class="slide-title1">
+											<strong>파킹봇</strong> 
+										</div>
+										<div class="slide-title2">
+											<P>
+												발렛 파킹 로봇 
+											</P>
+										</div>
+										<div class="slide-title3">
+										<i class="slide-txt-bar"></i> 
+											<span>
+												주차 로봇을 이용한<br>
+												발렛 파킹 서비스입니다.
+											</span> 
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 슬라이드 3 end -->
+							<!-- 슬라이드 3 -->
+							<li class='slide slide3'>
+								<div>
+									<div class='slide-title-wrap'>
+										<div class="slide-title1">
+											<strong>파크원</strong> 
+										</div>
+										<div class="slide-title2">
+											<P>
+												주차 통합관제 플랫폼 
+											</P>
+										</div>
+										<div class="slide-title3">
+											<i class="slide-txt-bar"></i> 
+											<span>
+												스페이스키퍼 &middot; 로드라커 &middot; 파킹봇을<br>
+												하나로 통합하는 관제서비스 플랫폼입니다.
+											</span> 
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 슬라이드 3 end -->
+							<!-- 슬라이드 0 -->
+							<li class='slide slide0'>
+								<div>
+									<div class='slide-title-wrap'>
+										<div class="slide-title1">
+											<strong>스페이스키퍼</strong> 
+										</div>
+										<div class="slide-title2">
+											<P>
+												VIP전용 지정주차 차단기 
+											</P>
+										</div>
+										<div class="slide-title3">
+											<i class="slide-txt-bar"></i> 
+											<span>
+												부정주차를 막고<br>
+												지정된 주차공간을 지켜드립니다.
+											</span> 
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 슬라이드 0 end -->
+						</ul> <!-- slide-wrap -->
+					</div>	<!-- slide-view -->
+
+					
+					<!-- 슬라이드 화살버튼 NEXT PREV -->
+					<span class='arrowPrevBt-wrap'><a href='javascript:' class='arrowPrevBt timeControl'><img src='../img/arrow_prev.png' alt=''></a></span>
+					<span class='arrowNextBt-wrap'><a href='javascript:' class='arrowNextBt timeControl'><img src='../img/arrow_next.png' alt=''></a></span>
+
+					<ul class='pageBt-wrap'>
+						<li><a href='javascript:' class='pageBt addPageBt blind'>page1</a></li>
+						<li><a href='javascript:' class='pageBt blind'>page2</a></li>
+						<li><a href='javascript:' class='pageBt blind'>page3</a></li>
+						<li><a href='javascript:' class='pageBt blind'>page4</a></li>
+					</ul>
+
+					<div class="scroll-down">
+						<a href="#" class="scroll-down-btn"></a>
+					</div>
+
+				</div> <!-- container -->
+			</div>
+		</section>
+		
+		<section id='section2'>
+			<div class="sec2-content">
+				<div class="text-wrap">
+					<div class="text-title">
+						<h6>PRODUCT</h6>
+					</div>
+					<div class="text-sub-title1">
+						<h2>주차공간의<br>새로운 크리에이터<br>올로케이션</h2>
+					</div>
+					<div class="text-sub-title2">
+						<p>주차공간의 새로운 크리에이터 올로케이션은 주차공간을 지키는 스페이스 키퍼, 노상주차의 새로운 패러다임 로드라커<br>
+						퍼즐/발렛파킹의 로봇, 파킹봇 그리고, 하나의 관제로 모두 모니터링과 제어 할 수 있는 파크원을 통하여<br>
+						주차계의 혁신과 트렌드, 그리고 합리적 가격으로 선도하겠습니다.
+						</p>
+					</div>
+				</div>
+				<ul class="img-wrap fixedclear">
+					<li>
+						<div>
+							<a href='javascript:' class='sec2SlideBt'>
+								<span>
+									<span class='sec2Slide-bgImage'></span> <!--백그라운드이미지-->
+									
+									<span class='sec2Slide-deco-line'>
+										<i class='deco-line deco-line0'></i> 
+										<i class='deco-line deco-line1'></i> 
+										<i class='deco-line deco-line2'></i> 
+										<i class='deco-line deco-line3'></i> 
+									</span>
+								</span>	
+							</a>
+							<span class='sec2-text'>
+								<span>
+									<strong>스페이스 키퍼</strong>
+									<p>VIP 주차공간을 지키는 무단주차방지</p>
+								</span>	
+							</span>
+
+							<div class="cover blind">반응형시 커버</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href='javascript:' class='sec2SlideBt'>
+								<span>
+									<span class='sec2Slide-bgImage'></span> <!--백그라운드이미지-->
+									
+									<span class='sec2Slide-deco-line'>
+										<i class='deco-line deco-line0'></i> 
+										<i class='deco-line deco-line1'></i> 
+										<i class='deco-line deco-line2'></i> 
+										<i class='deco-line deco-line3'></i> 
+									</span>
+								</span>	
+							</a>
+							<span class='sec2-text'>
+								<span>
+									<strong>로드라커</strong>
+									<p>노상 주차의 혁신</p>
+								</span>	
+							</span>
+							<div class="cover blind">반응형시 커버</div>
+						</div>
+					</li>
+					<li >
+						<div>
+							<a href='javascript:' class='sec2SlideBt'>
+								<span>
+									<span class='sec2Slide-bgImage'></span> <!--백그라운드이미지-->
+									<span class='sec2Slide-deco-line'>
+										<i class='deco-line deco-line0'></i> 
+										<i class='deco-line deco-line1'></i> 
+										<i class='deco-line deco-line2'></i> 
+										<i class='deco-line deco-line3'></i> 
+									</span>
+								</span>	
+							</a>
+							<span class='sec2-text'>
+								<span>
+									<strong>파킹봇</strong>
+									<p>발렛을 로봇에게! 파킹로봇</p>
+								</span>	
+							</span>
+							<div class="cover blind">반응형시 커버</div>
+						</div>
+					</li>
+					<li >
+						<div>
+							<a href='javascript:' class='sec2SlideBt'>
+								<span>
+									<span class='sec2Slide-bgImage'></span> <!--백그라운드이미지-->
+									
+									
+									<span class='sec2Slide-deco-line'>
+										<i class='deco-line deco-line0'></i> 
+										<i class='deco-line deco-line1'></i> 
+										<i class='deco-line deco-line2'></i> 
+										<i class='deco-line deco-line3'></i> 
+									</span>
+								</span>	
+							</a>
+							<span class='sec2-text'>
+								<span>
+									<strong>파크원</strong>
+									<p>이기종 통합관제</p>
+								</span>	
+							</span>
+							<div class="cover blind">반응형시 커버</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		
+		</section>
+		
+		<section id='section3' class="fixedclear">
+			<div class="fixedclear">
+				<div class="sec3-bgWrap">
+					<div class="sec3-bg"></div>
+					<div class="sec3-textBx">
+						<p>브랜드</p> 
+						<i class="sec3-title-deco"></i>
+					</div>
+				</div>
+				<div class="sec3-content-wrap">
+					<div class="sec3-imgBx">
+						<div class="sec3-img"></div> <!-- 백그라운드로 넣기 -->
+					</div>
+					<div class="sec3-txtBx">
+						<div>
+							<h2>주차의 새로운 크리에이터</h2>
+							<p>주차공간은 이 시대의 없어서는 안될 공간이 되었습니다. <br class="br01">
+								이러한 공간을 혁신과 다양한 가능성을 부여하여 안전하고 편리한 <br class="br02">
+								나만의 VIP 주차공간으로, 또는 이 공간을 합리적인 결제을 위한 무인시스템과 <br class="br03">
+								무상이탈을 방지하기 위한 로드라커 발렛파킹을 로봇에게 할 수 있는 파킹봇! <br class="br04">
+								주차공간의 최대한의 효과를 위한 퍼즐파킹! <br class="br05">
+								이 모든것을 관제하는 파크원서비스까지, <br class="br06">
+								지금까지 없었던 파킹공간의 크리에이터 올로케이션을 만나보세요. 
+							</p>
+							<a href="#" class="sec3-btn">BRAND STORY</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section id='section4'>
+			<div>
+				<div class="sec4-content-wrap">
+					<div class="sec4-textBx">
+						<p>언론보도</p> 
+						<i class="sec4-title-deco"></i>
+					</div>
+					<div class="sec4-container">
+						<div class="sec4-view">
+							
+
+								<ul class="sec4-rep-wrap fixedclear">
+
+
+									<li class="sec4-slide sec4-slide03"> 
+										<img src="../img/sec4-img04.jpg" alt=""> 
+										<div class="sec4-txt">
+											<span>
+												<h3>[GSPARK24 통합관제]</h3>
+												<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+											</span>
+											<p>올로케이션에서는 PARK1 통합관제 솔루션을 대기업 및 운영사에 제공하여<br>
+												주차장운영에 대한 노하우 및 운영 술루션을 제공,<br>
+												더 나은 주차운영에 대한 비전을 드리고 있습니다.</p>
+											
+										</div>
+										<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>	
+									</li>
+									
+									<li class="sec4-slide sec4-slide0"> 
+										<img src="../img/popUp01.jpg" alt=""> 
+										<div class="sec4-txt">
+											<span>
+												<h3>[신주발행계획 공고]</h3>
+												<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+											</span>
+											<p>
+												당사는 상법 제416조에 의거하여 이사회에서<br>
+												아래와 같이 신주발행을 결의하였으므로<br>
+												상법 제418조에 따라 이를 공고합니다.
+											</p>
+										</div>
+										<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>
+									</li>
+									<li class="sec4-slide sec4-slide01"> 
+										<img src="../img/sec4-img02.jpg" alt="">
+										<div class="sec4-txt">
+											<span>
+												<h3>[로드라커 스타벅스 설치 운영]</h3>
+												<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+											</span>
+											<p>김해 스타벅스에서 로드라커를 보실 수 있습니다.
+												제주도 서귀포, 제주시를 비롯하여 김해 스타벅스까지 로드라커를 시범운영하고 있습니다.<br>
+												이후 여수시에도 로드라커 시범운영 사업을 준비중에 있습니다.</p>
+											
+										</div>
+										<a href="#" class="rep-link" onclick="location.href='sub6-2.html'; return false;"></a> 
+									</li> 
+									<li class="sec4-slide sec4-slide02"> 
+										<img src="../img/sec4-img03.jpg" alt=""> 
+										<div class="sec4-txt">
+											<span>
+												<h3>[화성 파킹봇 시연]</h3>
+												<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+											</span>
+											<p>올로케이션에서는 화성 파킹로봇인 파킹봇 테스트베드 주차장을 시범운영하고 있습니다.<br>
+												주차업계의 새로운 발렛로봇인 파킹로봇을 개발.<br>
+												테스트베드 시범으로 주차업계의 새로운 패러다임을 만들고 있습니다.</p>
+										</div>
+										<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>
+									</li>
+									<li class="sec4-slide sec4-slide03"> 
+										<img src="../img/sec4-img04.jpg" alt=""> 
+										<div class="sec4-txt">
+											<span>
+												<h3>[GSPARK24 통합관제]</h3>
+												<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+											</span>
+											<p>올로케이션에서는 PARK1 통합관제 솔루션을 대기업 및 운영사에 제공하여<br>
+												주차장운영에 대한 노하우 및 운영 술루션을 제공,<br>
+												더 나은 주차운영에 대한 비전을 드리고 있습니다.</p>
+											
+										</div>
+										<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>	
+									</li>
+
+									<li class="sec4-slide sec4-slide0"> 
+										<img src="../img/popUp01.jpg" alt=""> 
+										<div class="sec4-txt">
+											<span>
+												<h3>[신주발행계획 공고]</h3>
+												<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+											</span>
+											<p>
+												당사는 상법 제416조에 의거하여 이사회에서<br>
+												아래와 같이 신주발행을 결의하였으므로<br>
+												상법 제418조에 따라 이를 공고합니다.
+											</p>
+										</div>
+										<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>
+									</li>
+								
+								
+								</ul>
+						</div>
+					</div>
+
+					<!-- <ul class="sec4-rep-wrap last fixedclear">
+						<li > 
+							<img src="../img/rep-img01.jpg" alt=""> 
+							<div class="sec4-txt">
+								<span>
+									<h3>[스페이스키퍼 사업설명회]</h3>
+									<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+								</span>
+								<p>스페이스키퍼 사업설명회를 오는 2021년 1월 올로케이션 본사...</p>
+								<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>
+								
+							</div>
+							<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>
+						</li>
+						<li > 
+							<img src="../img/rep-img02.jpg" alt="">
+							<div class="sec4-txt">
+								<span>
+									<h3>[로드라커 스타벅스 설치 운영]</h3>
+									<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+								</span>
+								<p>로드라커를 이제 스타벅스에서도 보실 수 있습니다. 2020년 9월...</p>
+								
+							</div>
+							<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>
+						</li>
+						<li > 
+							<img src="../img/rep-img03.jpg" alt=""> 
+							<div class="sec4-txt">
+								<span>
+									<h3>[화성 파킹봇 시연]</h3>
+									<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+								</span>
+								<p>올로케이션 화성 파킹봇 주차장에서 
+									파킹봇 퍼즐파킹 시연이 2021년 1월...
+									</p>
+								
+							</div>
+							<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>	
+						</li>
+						<li > 
+							<img src="../img/rep-img04.jpg" alt=""> 
+							<div class="sec4-txt">
+								<span>
+									<h3>[GSPARK24 통합관제]</h3>
+									<i class="sec4-line blind">섹션4 컨텐츠 언더라인</i>
+								</span>
+								<p>올로케이션 통합관제 시스템이 
+									GSPARK24 통합관제 개발로 한층...</p>
+								
+							</div>
+							<a href="#" class="rep-link" onclick="location.href='sub6-1.html'; return false;"></a>
+						</li>
+					</ul> -->
+
+
+					<!-- 언론보도 더보기 버튼 -->
+					<div class="moreView-wrp">
+						<div>
+							<a class="moreView-btn" >더보기</a>
+						</div>
+					</div>
+					<!-- 언론보도 더보기 버튼 end -->
+				</div>
+			</div>
+		</section>
+		
+		<section id="section5"> 
+			<div>
+				<div class="sec5-content-wrap">
+					<div class="sec5-textBx">
+						<p>미디어</p> 
+						<i class="sec5-title-deco"></i>
+					</div>
+
+					<div class="videoWrap" data-url="1GQLI-jUp3o">					
+						<iframe width="100%" height="720" src="https://www.youtube.com/embed/Fgo8sLlWXLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						
+						<!-- <iframe></iframe> -->
+					</div>
+					<span class='vdCap'></span>
+			
+				</div>
+			</div>
+		 </section>
+		
+		
+	</main>
+
+	<footer id='footer'>
+		<div>
+			<div class="footer-wrap ">
+				<h1>
+					<a href='#' onclick="location.href='main.html'; return false"><img src='../img/footer-logo.png' alt=''></a>
+				</h1>
+				<address>
+					회사소개<i></i>제휴문의<i></i>이용약관<i></i>개인정보처리방침<i></i>오시는길<br>
+				</address>
+				<p>©2020allocation. All Rights Reserved.</p>
+				<ul class="fixedclear">
+					<li><a href="#" class="footer-icon1"></a></li> 
+					<li><a href="#" class="footer-icon2"></a></li>
+					<li><a href="#" class="footer-icon3"></a></li>
+					<li><a href="#" class="footer-icon4"></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>	
+	
+	
+	<!-- <div class="popUp">
+		<div>
+			<img src="../img/popUp01.jpg" alt="">
+			
+		</div>
+		<a href="#" class="closeBtn"><img src="../img/closeBtn.png" alt=""></a>
+
+	</div> -->
+	
+</div>
+</body>
+</html>
